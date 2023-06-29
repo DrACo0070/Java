@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class = "com.di.Customer" id = "cuts">
+		
+		<constructor-arg value = "6666" />
+		<constructor-arg value = "Pawan" />
+		<constructor-arg value = "Chand" />
+		<constructor-arg value = "25" />
+		
+	</bean>
+	
+	<bean class = "com.di.Car" id = "cr">
+		
+		<property name="color" 	 value="Blue"/>
+		<property name="price" 	 value="9850000"/>
+		<property name="company" value="Ford"/>
+		
+	</bean>
+	
+	<bean class = "com.di.Teacher" id = "tech">
+	
+		<property name="id" 	 value="134"/>
+		<property name="name" 	 value="Rohit Chand"/>
+		<property name="subject" value="Java"/>
+		<property name="age" 	 value="45"/>
+		<property name="car" 	 ref="cr"/>
+	
+	</bean>
+
+</beans>
